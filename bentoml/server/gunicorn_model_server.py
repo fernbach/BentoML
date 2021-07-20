@@ -88,4 +88,5 @@ class GunicornModelServer(Application):  # pylint: disable=abstract-method
 
     def run(self):
         logger.info("Starting BentoML API server in production mode..")
+        logger.info(f"Running with config: {self.options}")
         super().run()

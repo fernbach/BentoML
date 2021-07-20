@@ -72,4 +72,5 @@ class GunicornMarshalServer(Application):  # pylint: disable=abstract-method
 
     def run(self):
         marshal_logger.info("Running micro batch service on :%d", self.port)
+        marshal_logger.info(f"Running with options: {self.options}")
         super().run()
